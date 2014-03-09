@@ -1,0 +1,23 @@
+<html xmlns='http://www.w3.org/1999/xthml' sml:lang='es' meta charset='utf-8'>
+	<head>
+			<title> El tiempo en Andalucia </title>
+	</head>
+	<body>
+	
+		<h1> El tiempo en Andalucia</h1>
+		{% set cont = 0 %}
+		{% for ciudad in nombre_ciudades %}
+		<h3>{{ nombre_ciudades[cont] }}</h3>
+		<u1>
+		
+				<li>Temperatura minima prevista: {{ temperatura_min [cont] }} grados C</li>
+				<li>Temperatura maxima prevista: {{ temperatura_max [cont] }} grados C</li>
+				<li>Viento: {{ viento_velocidad[cont] }} Km/h, Direccion: {{ viento_direccion[cont] }} </li>
+				
+		</u1>
+		{% set cont = cont + 1 %}
+		{%- endfor %}
+	
+	</body>
+	
+</html>
